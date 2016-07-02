@@ -1,0 +1,43 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src = "extensionQuery.js"></script>
+
+    <title>Lets do it</title>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div id="extension">
+      <form >
+        <input id ="newListName" type="text" name="firstname">
+        <input type="button" id="submitName" value="submit">
+      </form>
+      <button class="sessionBtn" id="addThisTab"> Legg til denne </button>
+      <button class="sessionBtn" id="skole"> Skole </button>
+      <button class="sessionBtn" id="save"> Save </button>
+      <button class="sessionBtn" id="load"> Load </button>
+      <button class="sessionBtn" id="clear"> Clear </button>
+      <br>
+      Liste med lastede lenker
+      <ul class = "shifting = "listHolder">
+      </ul>
+    </div>
+    <div id="loaded">shit</div>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
